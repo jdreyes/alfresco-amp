@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Modelo departamento y empresa -->
+
+<model name="dpto:dptoEmpresaModel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+   <!-- Optional meta-data about the model -->
+    <description>Modelo departamento y empresa</description>
+    <author>autentia</author>
+    <version>1.0</version>
+
+    <!-- Imports are required to allow references to definitions in other models -->
+    <imports>
+        <!-- Import Alfresco Dictionary Definitions -->
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d" />
+        <!-- Import Alfresco Content Domain Model Definitions -->
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm" />
+    </imports>
+   
+    <namespaces>
+        <namespace uri="dptoEmpresaModel.model" prefix="dpto"/>
+    </namespaces>
+    
+    <aspects>
+        <aspect name="dpto:dpto">
+            <title>Departamento - Empresa</title>
+            <properties>
+                <property name="dpto:idDpto">
+                    <title>ID de departamento</title>
+                    <type>d:long</type>
+                </property>
+                
+                <property name="dpto:nombreDpto">
+                	<title>Nombre de departamento</title>
+                	<type>d:text</type>
+                </property>
+                
+                <property name="dpto:nombreEmpresa">
+                	<title>Nombre de empresa</title>
+                	<type>d:text</type>
+                </property>
+            </properties>
+        </aspect>
+
+    </aspects>
+
+</model>

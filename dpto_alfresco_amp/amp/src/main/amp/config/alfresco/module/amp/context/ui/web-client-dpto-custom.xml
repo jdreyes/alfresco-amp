@@ -1,0 +1,58 @@
+<alfresco-config>
+
+	<!-- Lists the custom aspect in business rules Action wizard -->
+	<!-- Definimos los aspectos creados para que sean accesibles en la aplicacion 
+		web para ser seleciconado como aspecto "Use the Custom Aspect in a Business 
+		Rule". -->
+	<config evaluator="string-compare" condition="Action Wizards">
+		<aspects>
+			<aspect name="dpto:dpto" display-label="Departamento - Empresa" />
+		</aspects>
+	</config>
+
+	<!-- Document Library config section -->
+   <config evaluator="string-compare" condition="DocumentLibrary">
+   
+   	<aspects>
+         <!-- Aspects that a user can see -->
+         <visible>
+            <aspect name="dpto:dpto" display-label="Departamento - Empresa" />
+         </visible>
+
+         <!-- Aspects that a user can add. Same as "visible" if left empty -->
+         <addable>
+         </addable>
+
+         <!-- Aspects that a user can remove. Same as "visible" if left empty -->
+         <removeable>
+         </removeable>
+      </aspects>
+   
+   </config>
+   
+	
+	<!-- Definimos la lista de propiedas para que sean visible en la vista del 
+		documento -->
+	<config evaluator="aspect-name" condition="dpto:dpto">
+		<property-sheet>
+			<separator name="sepDptoEmpresa" display-label="Detalles Nodo - Departamento-Empresa"
+				component-generator="HeaderSeparatorGenerator" />
+			<show-property name="dpto:idDpto" />
+			<show-property name="dpto:nombreDpto" />
+			<show-property name="dpto:nombreEmpresa" />
+		</property-sheet>
+	</config>
+
+	<!-- Búsqueda avanzada -->
+	<config evaluator="string-compare" condition="Advanced Search">
+		<advanced-search>
+
+			<custom-properties>
+				<meta-data aspect="dpto:dpto" property="dpto:idDpto" />
+				<meta-data aspect="dpto:dpto" property="dpto:nombreDpto" />
+				<meta-data aspect="dpto:dpto" property="dpto:nombreEmpresa" />
+			</custom-properties>
+		</advanced-search>
+	</config>
+
+</alfresco-config>

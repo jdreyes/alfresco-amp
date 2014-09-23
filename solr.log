@@ -1,0 +1,15 @@
+14:23:19,680 WARN  [org.apache.solr.core.SolrCore] [archive] Solr index directory '/Users/jreyes/workspaces/tutoriales/dpto_alfresco/dpto_alfresco_amp/solr/solr_home/archive/SpacesStore/index' doesn't exist. Creating new index...
+14:23:19,853 WARN  [org.apache.solr.handler.component.SpellCheckComponent] No queryConverter defined, using default converter
+14:23:20,601 WARN  [org.apache.solr.core.SolrCore] [alfresco] Solr index directory '/Users/jreyes/workspaces/tutoriales/dpto_alfresco/dpto_alfresco_amp/solr/solr_home/workspace/SpacesStore/index' doesn't exist. Creating new index...
+14:23:20,612 WARN  [org.apache.solr.handler.component.SpellCheckComponent] No queryConverter defined, using default converter
+14:29:48,892 WARN  [org.apache.solr.handler.component.SpellCheckComponent] No queryConverter defined, using default converter
+14:29:50,007 WARN  [org.apache.solr.handler.component.SpellCheckComponent] No queryConverter defined, using default converter
+14:30:45,024 ERROR [org.alfresco.solr.tracker.CoreTracker] Tracking failed
+org.alfresco.error.AlfrescoRuntimeException: 08230000 GetModelsDiff return status is 503
+	at org.alfresco.solr.client.SOLRAPIClient.getModelsDiff(SOLRAPIClient.java:1059)
+	at org.alfresco.solr.tracker.CoreTracker.trackModels(CoreTracker.java:1897)
+	at org.alfresco.solr.tracker.CoreTracker.trackRepository(CoreTracker.java:1227)
+	at org.alfresco.solr.tracker.CoreTracker.updateIndex(CoreTracker.java:513)
+	at org.alfresco.solr.tracker.CoreTrackerJob.execute(CoreTrackerJob.java:45)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:216)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:563)
